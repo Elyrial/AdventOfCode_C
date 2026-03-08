@@ -1,11 +1,4 @@
-#include "common.h"
-#include "solutions/solutions.h"
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int runner_main(int argc, char **argv);
+#include "runner.h"
 
 int
 main(int argc, char **argv)

@@ -1,3 +1,4 @@
+#include "runner.h"
 #include "common.h"
 #include "solutions/solutions.h"
 
@@ -38,8 +39,6 @@ runner_main(int argc, char **argv)
     printf("Part 1 (%ld µs): %s\n", r.t1_us, r.part1);
     printf("Part 2 (%ld µs): %s\n", r.t2_us, r.part2);
 
-    free(r.part1);
-    free(r.part2);
     buffer_free(&input);
 
     return 0;
