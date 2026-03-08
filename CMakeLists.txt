@@ -19,16 +19,13 @@ add_executable(fetch_input
 target_include_directories(fetch_input PRIVATE src)
 target_link_libraries(fetch_input PRIVATE CURL::libcurl)
 
+file(GLOB_RECURSE SOLUTION_SOURCES "src/solutions/*.c")
+
 add_executable(aoc
     src/main.c
     src/runner.c
     src/common.c
-    src/fetch_input.c
-    src/solutions/solutions.c
-    src/solutions/year2025/year2025.c
-    src/solutions/year2025/day01.c
+    ${SOLUTION_SOURCES}
 )
 
 target_include_directories(aoc PRIVATE src)
-target_link_libraries(aoc PRIVATE CURL::libcurl)
-
