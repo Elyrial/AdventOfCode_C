@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+BUILD_DIR="${BUILD_DIR:-./build}"
+
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 <year> <day>"
     exit 1
@@ -14,8 +16,7 @@ input_file="inputs/year${year}/day${padded_day}.txt"
 
 if [ ! -f "$input_file" ]; then
     echo "Input file not found, fetching..."
-    ./build/fetch_input "$year" "$day"
+    "$BUILD_DIR/fetch_input" "$year" "$day"
 fi
 
-./build/aoc run "$year" "$day"
-
+"$BUILD_DIR/aoc" run "$year" "$day"
