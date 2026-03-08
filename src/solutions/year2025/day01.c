@@ -1,17 +1,9 @@
 #include "day01.h"
-#include "../../common.h"
+#include "common.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-static char *
-to_string(long long v)
-{
-    char buf[32];
-    sprintf(buf, "%lld", v);
-    return strdup(buf);
-}
 
 static long long
 part1(const char *input)
@@ -89,13 +81,12 @@ solve_2025_day01(const char *input)
     long t0;
 
     t0 = now_micros();
-    r.part1 = to_string(part1(input));
+    ll_to_str(part1(input), r.part1, sizeof(r.part1));
     r.t1_us = now_micros() - t0;
 
     t0 = now_micros();
-    r.part2 = to_string(part2(input));
+    ll_to_str(part2(input), r.part2, sizeof(r.part2));
     r.t2_us = now_micros() - t0;
 
     return r;
 }
-

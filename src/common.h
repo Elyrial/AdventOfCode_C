@@ -20,6 +20,7 @@ int file_write_all(const char *path, const char *data, size_t n);
 int ensure_dir_recursive(const char *path);
 
 void str_rtrim_inplace(char *s);
+void ll_to_str(long long v, char *buf, size_t n);
 
 int load_dotenv_if_present(const char *path);
 

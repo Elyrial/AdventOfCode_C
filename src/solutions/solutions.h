@@ -2,8 +2,8 @@
 #define AOC_SOLUTIONS_H
 
 typedef struct {
-    char *part1;
-    char *part2;
+    char part1[64];
+    char part2[64];
     long t1_us;
     long t2_us;
 } SolveResult;
