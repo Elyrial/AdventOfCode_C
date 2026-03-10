@@ -1,10 +1,12 @@
 #include "year2025.h"
 #include "day01.h"
+#include "day02.h"
 #include <stddef.h>
 
 static SolveFn days[] = {
     NULL,               /* day 0 unused */
     solve_2025_day01,   /* day 1 */
+    solve_2025_day02,   /* day 2 */
 };
 
 SolveFn
