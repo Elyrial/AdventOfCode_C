@@ -1,4 +1,5 @@
 #include "solutions.h"
+#include "year2015/year2015.h"
 #include "year2025/year2025.h"
 #include <stddef.h>
 
@@ -8,6 +9,7 @@ typedef struct {
 } YearEntry;
 
 static YearEntry years[] = {
+    { 2015, get_solution_2015 },
     { 2025, get_solution_2025 },
 };
 
